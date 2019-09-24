@@ -1,12 +1,20 @@
 <template>
   <div>
-    <h1>WELCOME to VUEjs LOGin PAGE</h1>
+    <h1>WELCOME to VUEjs REGISTER Page</h1>
     <div id="logIn">
-      <h2 class="free_account text-white">Log In Account</h2>
+      <h2 class="free_account text-white">Create an Account</h2>
 
+      <p>
+        <label>Full Name</label>
+        <input v-model="fname" type="text" id="fullname" placeholder="First Middle Last" />
+      </p>
       <p>
         <label>Username</label>
         <input v-model="uname" type="text" id="username" placeholder="Username" />
+      </p>
+      <p>
+        <label>Email</label>
+        <input v-model="uname" type="email" id="email" placeholder="Email" />
       </p>
       <p>
         <label>Password</label>
@@ -19,7 +27,7 @@
 
 <script>
 export default {
-  name: "login",
+  name: "register",
   data() {
     return {
       uname: "",
