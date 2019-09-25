@@ -1,29 +1,43 @@
 <template>
   <div>
-   <div id="wrap" style="display:none"> <!--wrap start-->
-        <div id="wrap2">  <!--wrap2 start-->
-       
-        <h2 class="free_account text-white">Create an free account</h2> 
-        
-        <form  method="post" id="register_form">
-            
-                <p class="validate_msg">Please fix the errors below!</p>
-                
-                <p> <label for="name">First Name</label> <input name="fname" type="text" /> <span class="val_fname"></span> </p> 
-                <p> <label for="lname">Last Name</label>  <input name="lname" type="text" />  <span class="val_lname"></span> </p>
-                <p> <label for="email">Your Email</label> <input name="email" type="text" /> <span class="val_email"></span> </p>
-                <p> <label for="password">Password</label>  <input name="password" type="password" /> <span class="val_pass"></span> </p>
-                <p> <label for="repassword">Retype Password</label>  <input name="repassword" type="password" /> <span class="val_pass2"></span> </p>
-                <p> <label for="phone">Phone No.</label> <input name="phone" type="text" /> <span class="val_phone"></span> </p>
-                <!-- <p><label for="birth">Birth Date</label> <input type="date" name="bday" value="yyyy-MM-dd"><span class="val_bday"></span> </p> -->
-                
-                <p> <label for="gender">Gender</label>  <input name="gender" type="radio" value="m" /> Male <input name="gender" type="radio" value="f" /> Female <span class="val_gen"></span> </p>
-                
-                <input type="submit" name="submit"  value="Register">
+   <div id="loginwrap" style="display:block">
+      <!--wrap start-->
+      <div id="login2">
+        <!--wrap2 start-->
+
+        <h2 class="free_account text-white">Register Here!</h2>
+
+        <form id="log_inform">
+          <p>
+            <label>First Name</label>
+            <input v-model="fname" type="text" placeholder="First Name" />
+          </p>
+          <p>
+            <label>Middle Name</label>
+            <input v-model="mname" type="text" placeholder="Middle Name" />
+          </p>
+          <p>
+            <label>Last Name</label>
+            <input v-model="lname" type="text" placeholder="Last Name" />
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input v-model="email" type="email" placeholder="Last Name" />
+          </p>
+          <p>
+            <label>Username</label>
+            <input v-model="uname" type="text" id="username" placeholder="Username" />
+          </p>
+          <p>
+            <label for="password">Password</label>
+            <input v-model="password" name="password" id="logPass" type="password" placeholder="********"/>
+          </p>
+          <input type="submit" @click="register" name="submit" id="logSub" value="Register" />
         </form>
-       
-        </div>  <!--wrap2 end-->
-    </div>  <!--wrap start-->
+      </div>
+      <!--wrap2 end-->
+    </div>
+    <!--wrap start-->
   </div>
 </template>
 
@@ -32,17 +46,22 @@ export default {
   name: "register",
   data() {
     return {
+      fname:"",
+      mname:"",
+      lname:"",
+      email:"",
       uname: "",
       password: ""
     };
   },
   methods: {
-    login: function() {
-      console.log("Username: " + this.uname + "\nPassword: " + this.password);
-      alert("Username: " + this.uname + "\nPassword: " + this.password);
+    register: function() {
+      console.log("Name: " + this.fname+" "+this.mname+" "+this.lname + "\nEmail Address: " + this.email+"\nUsername: " + this.uname + "\nPassword: " + this.password);
+      alert("Name: " + this.fname+" "+this.mname+" "+this.lname + "\nEmail Address: " + this.email+"\nUsername: " + this.uname + "\nPassword: " + this.password);
     }
   }
-};
+}
+
 </script>
 
 

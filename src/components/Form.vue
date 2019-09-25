@@ -1,19 +1,5 @@
 <template>
   <div>
-    <!-- <h1>Log In to MyFirstApp</h1>
-    <div id="logIn">
-      <h2 class="free_account text-white">Log In Account</h2>
-
-      <p>
-        <label>Username</label>
-        <input v-model="uname" type="text" id="username" placeholder="Username" />
-      </p>
-      <p>
-        <label>Password</label>
-        <input v-model="password" type="password" id="password" placeholder="**********" />
-      </p>
-      <button @click="login">Log In</button>
-    </div>-->
     <div id="loginwrap" style="display:block">
       <!--wrap start-->
       <div id="login2">
@@ -28,7 +14,7 @@
           </p>
           <p>
             <label for="password">Password</label>
-            <input name="password" id="logPass" type="password" />
+            <input v-model="password" name="password" id="logPass" type="password" placeholder="********" />
           </p>
           <input type="submit" @click="login" name="submit" id="logSub" value="Log In" />
         </form>
@@ -50,11 +36,12 @@ export default {
   },
   methods: {
     login: function() {
-      console.log("Username: " + this.uname + "\nPassword: " + this.password);
-      alert("Username: " + this.uname + "\nPassword: " + this.password);
+      console.log("Username: "+this.uname+"\nPassword: "+this.password),
+      alert("Username: "+this.uname +"\nPassword: "+this.password)
     }
   }
-};
+}
+
 </script>
 
 
@@ -66,7 +53,7 @@ export default {
   padding: 20px;
   margin: 20px auto;
   background-color: rgba(192, 192, 192, 0.5);
-  border: 1px solid #cc;
+  border: 1px solid #ccc;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   color: white;

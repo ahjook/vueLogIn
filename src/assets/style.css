@@ -1,3 +1,8 @@
+#logoName{
+  font-weight: 1000;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 #wrap,
 #loginwrap {
   width: 500px;
