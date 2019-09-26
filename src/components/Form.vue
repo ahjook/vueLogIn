@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import ROUTER from "router";
+
 export default {
   name: "login",
   data() {
@@ -37,7 +39,8 @@ export default {
   methods: {
     login: function() {
       console.log("Username: "+this.uname+"\nPassword: "+this.password),
-      alert("Username: "+this.uname +"\nPassword: "+this.password)
+      alert("Username: "+this.uname +"\nPassword: "+this.password),
+      redirect('/register')
     }
   }
 }
@@ -88,7 +91,6 @@ input[type="password"] {
   margin: 0;
   padding: 5px;
 }
-
 form#log_inform input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -98,7 +100,6 @@ input[type="email"] {
   margin: 0;
   padding: 5px;
 }
-
 form#register_form select {
   border: 1px solid #cccccc;
   display: inline-block;

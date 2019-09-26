@@ -3,6 +3,7 @@
     <Header></Header>
     <!-- <LogInForm></LogInForm>  -->
     <AppBody></AppBody>
+    
   </div>
 </template>
 
@@ -16,13 +17,14 @@ export default {
   components: {
     // LogInForm,
     Header,
-    AppBody
+    AppBody,
+   
   }
 };
 </script>
 
 <style>
-#app {
+body{
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

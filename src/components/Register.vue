@@ -61,7 +61,6 @@ export default {
     }
   }
 }
-
 </script>
 
 
@@ -73,7 +72,7 @@ export default {
   padding: 20px;
   margin: 20px auto;
   background-color: rgba(192, 192, 192, 0.5);
-  border: 1px solid #cc;
+  border: 1px solid #ccc;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   color: white;
@@ -108,7 +107,6 @@ input[type="password"] {
   margin: 0;
   padding: 5px;
 }
-
 form#log_inform input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -118,7 +116,6 @@ input[type="email"] {
   margin: 0;
   padding: 5px;
 }
-
 form#register_form select {
   border: 1px solid #cccccc;
   display: inline-block;
@@ -164,4 +161,6 @@ span.validate {
 background-image: url("https://blog.pusher.com/wp-content/uploads/2017/12/getting-started-pwa-vue.png");
   background-size: cover;
 } */
+
+
 </style>
