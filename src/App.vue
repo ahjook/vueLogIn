@@ -2,6 +2,7 @@
   <div id="app">
     <Header></Header>
     <!-- <LogInForm></LogInForm>  -->
+    <SideBar></SideBar>
     <AppBody></AppBody>
     
   </div>
@@ -10,6 +11,7 @@
 <script>
 // import LogInForm from "./components/Form.vue";
 import Header from "components/frame/Header.vue";
+import SideBar from "components/frame/Sidebar.vue";
 import AppBody from "components/frame/Body.vue";
 
 export default {
@@ -17,6 +19,7 @@ export default {
   components: {
     // LogInForm,
     Header,
+    SideBar,
     AppBody,
    
   }
